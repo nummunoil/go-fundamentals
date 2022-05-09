@@ -37,3 +37,11 @@ Run
 ```
 $ go run main.go
 ```
+
+## Go Testing
+
+```
+go test .
+go test ./...   // เทสลึกลงไปทุกชั้น
+go test -v      // report แบบละเอียดขึ้น
+```
