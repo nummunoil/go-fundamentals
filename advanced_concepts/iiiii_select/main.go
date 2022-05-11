@@ -15,6 +15,9 @@ func main() {
 	}
 
 	qCh <- struct{}{}
+
+	<-qCh
+	fmt.Println("end")
 }
 
 func fibonacci(ch chan int, qCh chan struct{}) {
@@ -24,6 +27,7 @@ func fibonacci(ch chan int, qCh chan struct{}) {
 		case ch <- a:
 			a, b = b, a+b
 		case <-qCh:
+			qCh <- struct{}{}
 			return
 		}
 	}
