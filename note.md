@@ -20,6 +20,18 @@ $ go clean --cache
 $ go clean --modcache
 ```
 
+- รันโปรแกรม
+
+```
+$ go run main.go
+```
+
+- รันตรวจสอบ race condition
+
+```
+$ go run -race main.go
+```
+
 ## Go Hello
 
 ```
@@ -30,12 +42,8 @@ go mod init github.com/nummunoil/hello
 ls // go.mod
 code .
 touch main.go
-```
-
-Run
-
-```
-$ go run main.go
+// coding
+go run main.go
 ```
 
 ## Go Testing
